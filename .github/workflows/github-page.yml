@@ -39,6 +39,10 @@ jobs:
         run: npm install -g pnpm && pnpm install
       - name: Build website
         run: pnpm build
+      - name: Replace script tag
+        run: sed -i 's,<script type="module" crossorigin src="/assets,<script type="module" crossorigin src="/piano-js/assets,' ./docs/index.html
+      - name: Replace css tag
+        run: sed -i 's,<link rel="stylesheet" href="/assets,<link rel="stylesheet" href="/piano-js/assets,' ./docs/index.html
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
