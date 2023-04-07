@@ -32,9 +32,7 @@ const ChromaticNote: React.FC<ChromaticNoteProps> = (props) => {
       className={`active:bg-slate-800 h-36 bg-black w-10 border-slate-500 border-[1px] z-30 absolute flex p-2 items-end justify-center`}
       style={{ left: `${props.left * 4}px` }}
       onMouseDown={() => play()}
-      onTouchStart={() => play()}
       onMouseUp={() => stop()}
-      onTouchEnd={() => stop()}
     >
       <span className="text-white">{props.label}{props.octaveIndex}</span>
 
