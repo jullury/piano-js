@@ -33,9 +33,7 @@ const NaturalNote: React.FC<NaturalNoteProps> = (props) => {
     <div
       className="active:bg-slate-100 h-60 bg-white w-12 border-slate-500 border-[1px] flex p-2 items-end justify-center"
       onMouseDown={() => play()}
-      onTouchStart={() => play()}
       onMouseUp={() => stop()}
-      onTouchCancel={() => stop()}
     >
       <span className="text-black">{props.label}{props.octaveIndex}</span>
     </div>
